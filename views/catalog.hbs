@@ -1,0 +1,11 @@
+<link href="../css/main.css" rel="stylesheet">
+
+{{#each data}}
+<div class="panel">
+    <a href="/{{packId}}"><h2>{{place}}</h2></a>
+    <img src="{{imageUrl}}" style="height:250px;width:444px;border-radius:8px;" alt="Image of location">
+    <h2>${{price}}</h2>
+    <h3>Duration: {{days}} days, {{nights}} nights</h3>
+    <a href="/{{packId}}" class="button">Book Now!</a>
+</div>
+{{/each}}

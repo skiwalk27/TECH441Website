@@ -1,0 +1,37 @@
+<link href="../css/main.css" rel="stylesheet">
+
+<h1><b>Let's go to {{data.place}}!</b></h1>
+<h2>${{data.price}}</h2>
+
+<img src="{{data.imageUrl}}" alt="Image of {{data.place}}" style="width:750px;border-radius:8px">
+
+<h4>{{data.descript}}</h4>
+
+<h3>What we're offering</h3>
+<ul>
+    <li>Duration of stay? <b>{{data.days}} days, {{data.nights}} nights</b></li>
+    <li>Flights included? <b>{{#if data.flightIncluded}}Yes{{else}}No{{/if}}</b></li>
+    <li>Hotel? <b>{{data.hotel}}</b></li>
+    <li>Package protection? <b>Absolutely!</b></li>
+</ul>
+{{#if admin}}
+    <h2>Travel Advisors cannot reserve travel packages.</h2>
+    <a href="/bookings" class="button">View Customer Reservations</a>
+{{else}}
+<h1>Ready to book your stay?</h1>
+{{#if loggedIn}}
+    {{#if reserved}}
+        <form action="/{{data.packId}}/remove" method="post">
+            <button type="submit">Cancel Reservation</button>
+        </form>
+    {{else}}
+        <form action="/{{data.packId}}/add" method="post">
+            <button type="submit">Finalize Booking!</button>
+        </form>
+    {{/if}}
+{{else}}
+    <h2>Please log in to reserve this package!</h2>
+    <a href="/login" class="button">Sign in</a>
+{{/if}}
+
+{{/if}}

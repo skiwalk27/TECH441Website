@@ -1,0 +1,21 @@
+<div style="background-color:darkgrey">
+    <br>
+    <h1 style="font-weight:bold;color:darkred;font-size:40px;">Sign up</h1>
+    <br>
+</div>
+<br>
+<form action="/signup" method="post">
+    <section>
+        <label for="username">Create Username:</label>
+        <input id="username" name="username" type="text" autocomplete="username" required>
+    </section>
+    <section>
+        <label for="new-password">Create Password:</label>
+        <input id="new-password" name="password" type="password" autocomplete="new-password" required>
+    </section>
+    <section>
+        <label for="admin-check">Travel Agent?</label>
+        <input id="admin-check" name="admin" type="checkbox">
+    </section>
+    <button type="submit">Sign up</button>
+</form>

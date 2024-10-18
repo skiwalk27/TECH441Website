@@ -1,0 +1,23 @@
+insert into location (place, days, nights, price, imageUrl, flightIncluded, packId, descript, hotel)
+values ("Denver, CO", 6, 5, 784, "./images/denver.jpg", 1, 1, "Visit the Mile High City!  Denver rests besides the Rocky Mountains and provides tons of outdoor activities all year round.  Hit the slopes at some of the best ski resorts in the nation or hike one of Colorado's many 14\'ers.", "
+Renaissance Denver Hotel & Conference Center")
+
+insert into location (place, days, nights, price, imageUrl, flightIncluded, packId, descript, hotel)
+values ("Miami, FL", 8, 7, 935, "./images/miami.jpg", 1, 2, "Visit Miami, Florida!  Spend some time at the beach or explore the electric nightlife with friends, or even make some new ones!  Enjoy prime dining experiences and a beautiful city.", "
+InterContinental Miami, an IHG Hotel")
+
+insert into location (place, days, nights, price, imageUrl, flightIncluded, packId, descript, hotel)
+values ("Amsterdam, Netherlands", 7, 6, 950, "./images/amsterdam.jpg", 0, 3, "Visit the Netherlands!  Amsterdam is the bike capital of the world and offers beautiful architecture in between vast canals.  There\s a reason this is our only abroad package!", "
+Inntel Hotels Amsterdam Zaandam")
+
+insert into location (place, days, nights, price, imageUrl, flightIncluded, packId, descript, hotel)
+values ("Minneapolis, MN", 4, 4, 384, "./images/minneapolis.jpg", 1, 4, "Visit the Twin Cities!  Minneapolis and St. Paul make for a georgous city skyline and bustling downtown district.  Home to the Mall of America!", "
+Millennium Minneapolis")
+
+insert into location (place, days, nights, price, imageUrl, flightIncluded, packId, descript, hotel)
+values ("New York City, NY", 10, 11, 834, "./images/new-york.jpg", 0, 5, "Visit the Big Apple!  New York City needs no introduction, hosting 1 in every 38 Americans who call the U.S. home.  Explore the concrete jungle, visit Central Park, or check out the Statue of Liberty!", "
+The Manhattan at Times Square Hotel")
+
+insert into location (place, days, nights, price, imageUrl, flightIncluded, packId, descript, hotel)
+values ("Honolulu, HI", 6, 6, 540, "./images/honolulu.jpg", 1, 6, "Visit Honolulu, a prime vacation destination offering vast sandy beaches, mountain views, and a breathtaking skyline.  Kick back by the ocean, hike through inactive volcanoes or enjoy the city.", "
+Hilton Hawaiian Village Waikiki Beach Resort")

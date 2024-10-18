@@ -1,0 +1,33 @@
+<link href="../css/main.css" rel="stylesheet">
+
+{{#if data}}
+
+
+{{#if admin}}
+    {{#each data}}
+        <div class="panel">
+            <h2>Reservation for User ID: {{personID}}</h2>
+            {{#with (lookup ../values [packID])}}
+            <h2>Package reserved: {{place}}</h2>
+            <img src="{{imageUrl}}" style="height:250px;width:444px;border-radius:8px;" alt="Image of location">
+                <br><br>
+            <a href="/{{packId}}" class="button">View Reservation</a>
+        </div>
+        {{/with}}
+    {{/each}}
+{{else}}
+    {{#each data}}
+        {{#with (lookup ../values [packID])}}
+        <div class="panel">
+                <h2>Package reserved: {{place}}</h2>
+                <img src="{{imageUrl}}" style="height:250px;width:444px;border-radius:8px;" alt="Image of location">
+                <br><br>
+                <a href="/{{packId}}" class="button">View Reservation</a>
+            </div>
+        {{/with}}
+    {{/each}}
+{{/if}}
+{{else}}
+    <h2>No packages reserved.</h2>
+    <a href="/" class="button">Return home</a>
+{{/if}}

@@ -1,0 +1,61 @@
+-- ----------------------------------------------------------------------------
+-- MySQL Workbench Migration
+-- Migrated Schemata: travelsite
+-- Source Schemata: travelsite
+-- Created: Fri Oct 18 17:35:07 2024
+-- Workbench Version: 8.0.38
+-- ----------------------------------------------------------------------------
+
+SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------------------------------------------------------
+-- Schema travelsite
+-- ----------------------------------------------------------------------------
+DROP SCHEMA IF EXISTS `travelsite` ;
+CREATE SCHEMA IF NOT EXISTS `travelsite` ;
+
+-- ----------------------------------------------------------------------------
+-- Table travelsite.location
+-- ----------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS `travelsite`.`location` (
+  `place` VARCHAR(30) NULL DEFAULT NULL,
+  `days` INT NULL DEFAULT NULL,
+  `nights` INT NULL DEFAULT NULL,
+  `price` FLOAT NULL DEFAULT NULL,
+  `imageUrl` TINYTEXT NULL DEFAULT NULL,
+  `flightIncluded` TINYINT(1) NULL DEFAULT NULL,
+  `packId` INT NOT NULL,
+  `descript` TEXT NULL DEFAULT NULL,
+  `hotel` VARCHAR(50) NULL DEFAULT NULL,
+  PRIMARY KEY (`packId`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+-- ----------------------------------------------------------------------------
+-- Table travelsite.packtocustomer
+-- ----------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS `travelsite`.`packtocustomer` (
+  `orderID` INT NOT NULL,
+  `personID` INT NULL DEFAULT NULL,
+  `packID` INT NULL DEFAULT NULL,
+  PRIMARY KEY (`orderID`),
+  INDEX `FK_packID` (`personID` ASC) VISIBLE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+-- ----------------------------------------------------------------------------
+-- Table travelsite.users
+-- ----------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS `travelsite`.`users` (
+  `personID` INT NOT NULL,
+  `username` VARCHAR(30) NULL DEFAULT NULL,
+  `password` VARCHAR(250) NULL DEFAULT NULL,
+  `admin` TINYINT(1) NULL DEFAULT NULL,
+  `salt` VARCHAR(50) NULL DEFAULT NULL,
+  PRIMARY KEY (`personID`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+SET FOREIGN_KEY_CHECKS = 1;

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="../public/css/main.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>World Tour</title>
+    <script src="//code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <table style="width:100%;">
+    <tr>
+        <th rowspan="3" style="text-align:left;width:70%"><a href="/"><h1>World Tour</h1></a></th>
+    <th style="text-align:right">
+        {{#if loggedIn}}
+            Welcome, {{user}}!</th>
+        </tr>
+            <tr>
+                <th style="text-align:right">
+                    {{#if admin}}
+                        Travel Advisor Account
+                        <a href="./bookings" class="button">See All Reservations</a>
+                    {{else}}
+                        <a href="./bookings" class="button">See My Reservations</a>
+                    {{/if}}
+                </th>
+            </tr>
+        <tr>
+        <th style="text-align:right">
+            <a href="./logout" class="button">Sign out</a>
+        {{else}}
+            <a href="/login" class="button">Log in</a>
+        </th>
+        </tr>
+        <tr>
+            <th style="text-align:right"><a href="/signup" class="button">Sign Up</a>
+        </tr>
+        {{/if}}
+    </th>
+    </tr>
+    </table>
+
+    <h2>Let's get out there.</h2>
+</div>
+
+{{{body}}}
+
+</body>
+</html>
